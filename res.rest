@@ -1,0 +1,75 @@
+get http://localhost:5000/users
+
+###
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "username":"julian",
+    "email" :"julian@gmail.com",
+    "password": "12345678910123",
+    "confPassword": "12345678910123",
+     "role":"admin" 
+
+}
+###
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "username":"data01",
+    "email" :"data01n@gmail.com",
+    "password": "12345678910123",
+    "confPassword": "12345678910123",
+     "role":"user" 
+
+}
+
+###
+get http://localhost:5000/users/2
+
+###
+PATCH  http://localhost:5000/users/2
+Content-Type: application/json
+{
+    "username":"sampahfirman",
+    "email" :"sampahfirman@gmail.com",
+    "password": "12345678910123",
+    "confPassword": "12345678910123",
+     "role":"admin" 
+}
+
+###
+DELETE  http://localhost:5000/users/2
+
+
+//login admin
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+ "email" :"sata01@gmail.com",
+"password": "12345678910123"
+}
+
+
+//login user
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+ "email" :"data01n@gmail.com",
+"password": "12345678910123"
+}
+
+
+###
+get http://localhost:5000/me
+
+###
+DELETE http://localhost:5000/logout
+    
+    
+     
